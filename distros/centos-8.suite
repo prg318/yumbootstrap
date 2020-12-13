@@ -1,7 +1,7 @@
 name = CentOS
 release = 8
 
-gpg_key =  RPM-GPG-KEY-CentOS-8-Official
+gpg_key =  gpg/RPM-GPG-KEY-CentOS-8-Official
 #gpg_key ?= gpg/RPM-GPG-KEY-CentOS-Security-7
 
 packages = packages/${suite}.list
@@ -11,10 +11,10 @@ finalize = scripts/fix_rpmdb.py
 finalize = scripts/clean_yumbootstrap.py
 
 [repositories]
-baseos         = http://mirror.centos.org/centos-8/8/BaseOS/$basearch/
-appstream      = http://mirror.centos.org/centos-8/8/AppStream/$basearch/
-devel          = http://mirror.centos.org/centos-8/8/Devel/$basearch/
-PowerTools     = http://mirror.centos.org/centos-8/8/PowerTools/$basearch/
+baseos         = http://mirror.centos.org/centos-8/8/BaseOS/$basearch/os/
+appstream      = http://mirror.centos.org/centos-8/8/AppStream/$basearch/os/
+devel          = http://mirror.centos.org/centos-8/8/Devel/$basearch/os/
+PowerTools     = http://mirror.centos.org/centos-8/8/PowerTools/$basearch/os/
 
 [environment]
 #PYTHONPATH=...
